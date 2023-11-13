@@ -51,7 +51,7 @@ router.post('/register', async (req, res) => {
     }
 
     try {
-
+        let token;
         const userExist = await User.findOne({ email: email });
 
         if (userExist) {
@@ -62,6 +62,14 @@ router.post('/register', async (req, res) => {
              const user = new User({ name, email, phone, work, password, cpassword });
             // yeha pe 
             await user.save();
+
+              // Set the cookie here
+            res.cookie('jwtoken', token, {
+            sameSite: 'None',
+            secure: true, // Include this if your app is served over HTTPS
+            // other cookie options...
+        });
+
             res.status(201).json({ message: "user registered successfuly" });
         }
         
@@ -101,7 +109,10 @@ router.post('/signin', async (req, res) => {
 
             res.cookie("jwtoken", token, {
                 expires: new Date(Date.now() + 25892000000),
-                httpOnly:true
+            httpOnly: true,
+            sameSite: 'None',
+            secure: true, // Include this if your app is served over HTTPS
+            // other cookie options...
             });
             
             res.json({ message: "user Signin Successfully" });
