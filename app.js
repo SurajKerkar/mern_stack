@@ -16,7 +16,7 @@ const app = express();
 
 app.use(cors({ 
     credentials: true, 
-    origin: 'https://super-biscotti-2284d2.netlify.app/',
+    origin: 'https://super-biscotti-2284d2.netlify.app',
     methods: ["GET", "POST"],
 },  
     
