@@ -9,7 +9,7 @@ const Logout = () => {
 
         
     useEffect(() => {
-        fetch('http://localhost:5000/logout', {
+        fetch('https://mern-stack-zip9.onrender.com/logout', {
             method: "GET",
             headers: {
                 Accept: "appllication/json",

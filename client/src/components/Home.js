@@ -6,7 +6,7 @@ const Home = () => {
 
   const userHomePage = async () => {
     try {
-        const res = await fetch('http://localhost:5000/getdata', {
+        const res = await fetch('https://mern-stack-zip9.onrender.com/getdata', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

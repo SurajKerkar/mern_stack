@@ -24,7 +24,7 @@ const Signup = () => {
 
         const { name, email, phone, work, password, cpassword } = user;
 
-        const res = await fetch("http://localhost:5000/register", {
+        const res = await fetch("https://mern-stack-zip9.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

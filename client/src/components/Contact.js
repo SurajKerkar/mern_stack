@@ -6,7 +6,7 @@ const Contact = () => {
 
     const userContact = async () => {
         try {
-            const res = await fetch('http://localhost:5000/getdata', {
+            const res = await fetch('https://mern-stack-zip9.onrender.com/getdata', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -48,7 +48,7 @@ const Contact = () => {
 
         const { name, email, phone, message } = userData;
 
-        const res = await fetch('http://localhost:5000/contact', {
+        const res = await fetch('https://mern-stack-zip9.onrender.com/contact', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -11,7 +11,7 @@ const About = () => {
 
     const callAboutPage = async () => {
         try {
-            const res = await fetch('http://localhost:5000/about', {
+            const res = await fetch('https://mern-stack-zip9.onrender.com/about', {
                 method: "GET",
                 headers: {
                     Accept: "appllication/json",
