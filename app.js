@@ -11,14 +11,21 @@ const app = express();
 // })
 // );
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://super-biscotti-2284d2.netlify.app');
+    res.header('Access-Control-Allow-Credentials', true);
+    // other headers...
+    next();
+});
 
-app.use(cors({ 
-    credentials: true, 
-    origin: 'https://super-biscotti-2284d2.netlify.app',
-    methods: ["GET", "POST"],
-},
+
+// app.use(cors({ 
+//     credentials: true, 
+//     origin: 'https://super-biscotti-2284d2.netlify.app',
+//     methods: ["GET", "POST"],
+// },
     
-    ));
+//     ));
 
 
 // app.use(cors())
