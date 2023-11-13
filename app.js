@@ -16,9 +16,9 @@ const app = express();
 
 app.use(cors({ 
     credentials: true, 
-    origin: 'http://localhost:3000',
+    origin: 'https://super-biscotti-2284d2.netlify.app/',
     methods: ["GET", "POST"],
-},
+},  
     
     ));
 
